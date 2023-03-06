@@ -7,6 +7,9 @@ public class Student{
     private int ranking;
 
     public Student(String name){
+        setName(name); 
+    }
+    public void setName(String name){
         this.name = name;
     }
     public String getName(){
@@ -23,7 +26,9 @@ public class Student{
     public String getLetterGrade(){
         return letterGradeHashMap;
     }
-/*
+    
+    // saving this for v2
+    /*
     public String addAssignment(double score, double possibleScore){
         
         double gradePercentage = score/possibleScore;
@@ -32,5 +37,5 @@ public class Student{
             this.gradePercentage = 100.00;
         }
     }
+    */
 }
-*/
