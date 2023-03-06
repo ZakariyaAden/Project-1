@@ -3,7 +3,7 @@ import java.util.*;
 
 public class GradeBook{
     public static void main(String[] args){
-        Student arr = {
+        Student[] arr = {
             Student s1 = new Student("Ali");
             Student s2 = new Student("Zak");
             Student s3 = new Student("Aideed");
@@ -38,8 +38,10 @@ public class GradeBook{
                     int randIndex2 = randGradeGenerator.nextInt(11);
                     int randIndex3 = randGradeGenerator.nextInt(11);
                     arr[i].setLetterGrade(possibleGradeArr[randIndex1],possibleGradeArr[randIndex2],possibleGradeArr[randIndex3]);
-                    fw.write(arr[i].name);
-                    fw.write(arr[i].getLetterGrade);
+                    fw.write(arr[i].getName());
+                    fw.write(arr[i].getLetterGrade(1));
+                    fw.write(arr[i].getLetterGrade(2));
+                    fw.write(arr[i].getLetterGrade(3));
                     fw.close();
                     Scanner fr = new Scanner(file);
                     int lineCounter = 0;
@@ -53,6 +55,11 @@ public class GradeBook{
                     System.out.println("An error occurred.");
                     e.printStackTrace();
                 }
+        }
+    }
+    public static void rankMethod(Student[] paraArr){
+        for(int i = 0; i < paraArr.length;i++){
+
         }
     }
 }

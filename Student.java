@@ -23,8 +23,23 @@ public class Student{
         letterGradeHashMap.put("Science",scienceletterGrade);
         letterGradeHashMap.put("English",englishletterGrade);
     }
-    public String getLetterGrade(){
-        return letterGradeHashMap;
+    public String getLetterGrade(int indecator){
+        String grade = null;
+        if(indecator > 3){return;}
+        switch(indecator){
+            case 1: 
+                grade = letterGradeHashMap.get("Math");
+                break;
+            case 2: 
+                grade = letterGradeHashMap.get("Science");
+                break;
+            case 3: 
+                grade = letterGradeHashMap.get("English");
+                break;
+            default:
+                break;
+        }
+        return grade;
     }
     
     // saving this for v2
