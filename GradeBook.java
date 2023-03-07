@@ -4,11 +4,11 @@ import java.util.*;
 public class GradeBook{
     public static void main(String[] args){
         Student[] arr = {
-            Student s1 = new Student("Ali");
-            Student s2 = new Student("Zak");
-            Student s3 = new Student("Aideed");
-            Student s4 = new Student("Hamza");
-        }
+            new Student("Ali"),
+            new Student("Zak"),
+            new Student("Aideed"),
+            new Student("Hamza"),
+        };
         for (int i = 0; i<arr.length;i++){
                 try {
                     File file = new File("file" + i + ".txt");
@@ -20,7 +20,7 @@ public class GradeBook{
                     }
                     FileWriter fw = new FileWriter(file);
                     Random randGradeGenerator = new Random();
-                    String possibleGradeArr = {
+                    String[] possibleGradeArr = {
                         "A",
                         "A-",
                         "B+",
@@ -38,10 +38,15 @@ public class GradeBook{
                     int randIndex2 = randGradeGenerator.nextInt(11);
                     int randIndex3 = randGradeGenerator.nextInt(11);
                     arr[i].setLetterGrade(possibleGradeArr[randIndex1],possibleGradeArr[randIndex2],possibleGradeArr[randIndex3]);
-                    fw.write(arr[i].getName());
-                    fw.write(arr[i].getLetterGrade(1));
-                    fw.write(arr[i].getLetterGrade(2));
-                    fw.write(arr[i].getLetterGrade(3));
+                    Student objForIterator = arr[i];
+                    fw.write(objForIterator.getName());
+
+                    //have to covert Hashmap to readable string
+
+                    //fw.write(objForIterator.getLetterGrade(1));
+                    //fw.write(objForIterator.getLetterGrade(2));
+                    //fw.write(objForIterator.getLetterGrade(3));
+                    fw.write(objForIterator.getLetterGradeSimply());
                     fw.close();
                     Scanner fr = new Scanner(file);
                     int lineCounter = 0;
@@ -49,7 +54,7 @@ public class GradeBook{
                         lineCounter++;
                     }
                     if(lineCounter != 2){
-                        th
+                        //dang
                     }
                 } catch (IOException e) {
                     System.out.println("An error occurred.");

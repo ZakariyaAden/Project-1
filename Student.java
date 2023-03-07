@@ -7,9 +7,6 @@ public class Student{
     private int ranking;
 
     public Student(String name){
-        setName(name); 
-    }
-    public void setName(String name){
         this.name = name;
     }
     public String getName(){
@@ -23,9 +20,12 @@ public class Student{
         letterGradeHashMap.put("Science",scienceletterGrade);
         letterGradeHashMap.put("English",englishletterGrade);
     }
+    public String getLetterGradeSimply(){
+        return this.letterGradeHashMap;
+    }
     public String getLetterGrade(int indecator){
         String grade = null;
-        if(indecator > 3){return;}
+        if(indecator > 3){return null;}
         switch(indecator){
             case 1: 
                 grade = letterGradeHashMap.get("Math");
@@ -41,9 +41,7 @@ public class Student{
         }
         return grade;
     }
-    
-    // saving this for v2
-    /*
+/*
     public String addAssignment(double score, double possibleScore){
         
         double gradePercentage = score/possibleScore;
@@ -52,5 +50,5 @@ public class Student{
             this.gradePercentage = 100.00;
         }
     }
-    */
+*/
 }
