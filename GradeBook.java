@@ -42,11 +42,12 @@ public class GradeBook{
                     fw.write(objForIterator.getName());
 
                     //have to covert Hashmap to readable string
+                    //have to test if what i did actually did anything
 
                     //fw.write(objForIterator.getLetterGrade(1));
                     //fw.write(objForIterator.getLetterGrade(2));
                     //fw.write(objForIterator.getLetterGrade(3));
-                    fw.write(objForIterator.getLetterGradeSimply());
+                    fw.write(objForIterator.getLetterGrade());
                     fw.close();
                     Scanner fr = new Scanner(file);
                     int lineCounter = 0;
