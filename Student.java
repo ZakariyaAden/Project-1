@@ -28,13 +28,13 @@ public class Student{
         if(indecator > 3){return null;}
         switch(indecator){
             case 1: 
-                grade = letterGradeHashMap.get("Math");
+                grade = "Math: " + letterGradeHashMap.get("Math") + "\n";
                 break;
             case 2: 
-                grade = letterGradeHashMap.get("Science");
+                grade = "Science: " + letterGradeHashMap.get("Science") + "\n";
                 break;
             case 3: 
-                grade = letterGradeHashMap.get("English");
+                grade = "English: " + letterGradeHashMap.get("English") + "\n";
                 break;
             default:
                 break;
