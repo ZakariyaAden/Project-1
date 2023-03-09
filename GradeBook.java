@@ -38,16 +38,16 @@ public class GradeBook{
                     int randIndex2 = randGradeGenerator.nextInt(11);
                     int randIndex3 = randGradeGenerator.nextInt(11);
                     arr[i].setLetterGrade(possibleGradeArr[randIndex1],possibleGradeArr[randIndex2],possibleGradeArr[randIndex3]);
-                    Student objForIterator = arr[i];
-                    fw.write(objForIterator.getName());
+                    Student objForLoop = arr[i];
+                    fw.write(objForLoop.getName());
 
                     //have to covert Hashmap to readable string
                     //have to test if what i did actually did anything
 
-                    //fw.write(objForIterator.getLetterGrade(1));
-                    //fw.write(objForIterator.getLetterGrade(2));
-                    //fw.write(objForIterator.getLetterGrade(3));
-                    fw.write(objForIterator.getLetterGrade());
+                    //fw.write(objForLoop.getLetterGrade(1));
+                    //fw.write(objForLoop.getLetterGrade(2));
+                    //fw.write(objForLoop.getLetterGrade(3));
+                    fw.write(objForLoop.getLetterGrade());
                     fw.close();
                     Scanner fr = new Scanner(file);
                     int lineCounter = 0;
