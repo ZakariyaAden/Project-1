@@ -8,6 +8,7 @@ public class Student{
 
     public Student(String name){
         this.name = name;
+                HashMap<String,String> letterGradeHashMap = new HashMap<>();
     }
     public String getName(){
         return this.name;
@@ -20,21 +21,21 @@ public class Student{
         letterGradeHashMap.put("Science",scienceletterGrade);
         letterGradeHashMap.put("English",englishletterGrade);
     }
-    public String getLetterGradeSimply(){
-        return this.letterGradeHashMap;
-    }
     public String getLetterGrade(int indecator){
         String grade = null;
         if(indecator > 3){return null;}
         switch(indecator){
             case 1: 
-                grade = "Math: " + letterGradeHashMap.get("Math") + "\n";
+                if (this.letterGradeHashMap.containsValue("Math") != true){return grade;}
+                grade = "Math: " + this.letterGradeHashMap.get("Math") + "\n";
                 break;
             case 2: 
-                grade = "Science: " + letterGradeHashMap.get("Science") + "\n";
+                if (this.letterGradeHashMap.containsValue("Science") != true){return grade;}
+                grade = "Science: " + this.letterGradeHashMap.get("Science") + "\n";
                 break;
             case 3: 
-                grade = "English: " + letterGradeHashMap.get("English") + "\n";
+                if (this.letterGradeHashMap.containsValue("English") != true){return grade;}
+                grade = "English: " + this.letterGradeHashMap.get("English") + "\n";
                 break;
             default:
                 break;
