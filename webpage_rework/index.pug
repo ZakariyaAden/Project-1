@@ -3,23 +3,24 @@ html(lang="en")
         title Project-1
         script(src="index.js")
         link(rel="stylesheet" href="style.css")
-    body 
-        div.main_div(onmouseover="addButtons()")
+    body#body 
+        div(id="backgroundDiv")
+        .main_div(onmouseenter="addButtons()" onmouseleave="deleteButtons()" id="main_div")
             h1.div_title Student
             .scroller 
-                .studentCard
+                .studentCard(onclick="showPreview()")
                     a.studentCardLink Ali
-                .studentCard
+                .studentCard(onclick="showPreview()")
                     a.studentCardLink Ali
-                .studentCard
+                .studentCard(onclick="showPreview()")
                     a.studentCardLink Ali
-                .studentCard
+                .studentCard(onclick="showPreview()")
                     a.studentCardLink Ali
-                .studentCard
+                .studentCard(onclick="showPreview()")
                     a.studentCardLink Ali
-                .studentCard
+                .studentCard(onclick="showPreview()")
                     a.studentCardLink Ali
-                .studentCard
+                .studentCard(onclick="showPreview()")
                     a.studentCardLink Ali
-                .studentCard
+                .studentCard(onclick="showPreview()")
                     a.studentCardLink Ali
