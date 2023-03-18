@@ -18,8 +18,10 @@ function deleteButtons(){
     div.removeChild(buttons); 
 }
 function showPreview(){
-    const backgroundDiv = document.getElementById('backgroundDiv');
+    const body = document.getElementById('body');
+    const backgroundDiv = document.createElement('div');
     const backgroundDivClass = document.createAttribute('class');
     backgroundDivClass.value = 'backgroundDiv';
     backgroundDiv.setAttributeNode(backgroundDivClass);
+    body.append(backgroundDiv);
 }
